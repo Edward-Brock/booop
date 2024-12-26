@@ -13,6 +13,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
     "@nuxt/eslint": "0.7.4",
     "@nuxt/ui": "2.20.0",
     "@prisma/client": "^6.1.0",
