@@ -14,9 +14,6 @@ const items = [
   }], [{
     label: '设置',
     icon: 'i-heroicons-cog-8-tooth',
-    click: async () => {
-      await navigateTo({ path: '/setting' })
-    },
   }, {
     label: 'GitHub 仓库',
     icon: 'i-mdi-github',
