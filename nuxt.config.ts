@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      projectName: process.env.NUXT_PROJECT_NAME,
+      projectDescription: process.env.NUXT_PROJECT_DESCRIPTION,
+    },
+  },
   future: {
     compatibilityVersion: 4,
   },
