@@ -1,0 +1,51 @@
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
+.data
+dist
+
+# Node dependencies
+node_modules
+pnpm-debug.log*
+
+# Local env files
+*.env
+.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# VSCode and other editors
+.vscode
+.devcontainer
+.editorconfig
+.idea
+.fleet
+
+# Misc
+.git
+.github
+.gitignore
+.dockerignore
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# CI/CD and project-specific files
+Dockerfile*
+docker-compose*
+README.md
+Makefile
+helm-charts
+coverage*
+
+# Test-related files
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
