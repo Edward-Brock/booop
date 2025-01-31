@@ -18,6 +18,11 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
 
 # Copy source code and build
 COPY . .
+
+# Generate Prisma client (after source code is copied)
+RUN pnpm dlx prisma generate
+
+# Build Nuxt application
 RUN --mount=type=cache,id=nuxt,target=/app/node_modules/.cache/nuxt/.nuxt \
   pnpm run build
 
@@ -31,7 +36,7 @@ EXPOSE 3000
 HEALTHCHECK --retries=10 --start-period=5s \
   CMD wget --no-verbose --spider http://0.0.0.0:3000/ || exit 1
 
-# Copy build output
+# Copy build output and Prisma client from builder
 COPY --from=builder /app ./
 
 # Default command
